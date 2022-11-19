@@ -1,0 +1,30 @@
+<html>
+{% load static %}
+<head>
+    <title>Allergen Prediction</title>
+</head>
+
+<body onLoad="autoScroll('newsslider','newssection',5,true)" style="background-color:#808080">
+<center>
+    <table width="700" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+        <tr>
+            <td colspan="2">
+                <h1><a href="{% url 'home' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{% url 'method_description' %}">Method Description</a></h1>
+        </tr>
+
+        <tr>
+            <td width="410"><p align="center" class="style1"><h1>Click on the links below to access the data sets in FASTA fromat</h1></td>
+            <td width="290"><div align="center"><img src="{% static 'images/allergen_logo.jpeg' %}" width="228" height="163"></div></td>
+        </tr>
+
+        <tr>
+            <td width="550"><h1><a href="{% url 'allergen_dataset' %}">Allergen data set</a></h1>
+            <h1><a href="{% url 'non_allergen_dataset' %}">Non-Allergen data set</a></h1></td>
+        </tr>
+
+    </table>
+</center>
+</body>
+</html>
+

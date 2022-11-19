@@ -1,0 +1,29 @@
+<html>
+{% load static %}
+<head>
+    <title>Allergen Prediction</title>
+</head>
+
+<body onLoad="autoScroll('newsslider','newssection',5,true)" style="background-color:#808080">
+<center>
+    <table width="700" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+        <tr>
+            <td colspan="2">
+                <h1>Bioinformatics tool for allergenicity prediction</h1>
+        </tr>
+
+        <tr>
+            <td width="410"><p align="center" class="style1"><h1>LSTM</h1></td>
+            <td width="290"><div align="center"><img src="{% static 'images/allergen_logo.jpeg' %}" width="228" height="163"></div></td>
+        </tr>
+
+        <tr>
+            <td width="550"><h1>Your protein sequence is: {{prediction}} </h1></td>
+        </tr>
+
+
+    </table>
+</center>
+</body>
+</html>
+

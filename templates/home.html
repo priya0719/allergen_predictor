@@ -1,0 +1,41 @@
+<html>
+{% load static %}
+<head>
+    <title>Allergen Prediction</title>
+</head>
+
+<body onLoad="autoScroll('newsslider','newssection',5,true)" style="background-color:#808080">
+<center>
+    <table width="700" border="0" cellspacing="0" cellpadding="0" style="background-color:#FFFFFF">
+        <tr>
+            <td colspan="2">
+                <h1><a href="{% url 'home' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{% url 'data_sets' %}">Data sets</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{% url 'method_description' %}">Method Description</a></h1>
+        </tr>
+
+        <tr>
+            <td width="410"><p align="center" class="style1"><h1>LSTM</h1></td>
+            <td width="290"><div align="center"><img src="{% static 'images/allergen_logo.jpeg' %}" width="228" height="163"></div></td>
+        </tr>
+
+        <tr>
+            <td width="550"><h1>Enter a PROTEIN sequence here as a plain text (one letter code) </h1></td>
+        </tr>
+
+        <tr>
+            <td height="157">
+                <form action="predict" method="post">
+                    {% csrf_token %}
+                    <textarea name="sequence" id="sequence" cols="74" rows="10" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; font-weight:700; color:#003366" wrap="virtual" onFocus="this.value=''; return false;"></textarea>
+                    <input value="Submit" type="submit">
+                </form>
+            </td>
+        </tr>
+
+
+    </table>
+</center>
+</bo>
+</html>
+
